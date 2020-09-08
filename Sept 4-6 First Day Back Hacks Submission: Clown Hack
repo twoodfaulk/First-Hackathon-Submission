@@ -1,0 +1,110 @@
+import java.util.Scanner;
+public class MyProgram
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        
+        hackTitle();
+        System.out.println();
+        
+        System.out.println("Ah! Hello there young (or old) traveler!");
+        System.out.println("I will be your humble narrator for your great quest!");
+        
+        System.out.println("I should tell you, that whenever I ask a question, I'm leaving space for you to leave your important answers below!");
+        System.out.println("You're choices and words are important, (and so are mine) however this is YOUR tale. Soley about YOU.");
+        System.out.println("Because I, am merely your HUMBLE narrator.");
+        System.out.println("");
+        System.out.println("First, do tell me, what is your name traveler?");
+        String playerName = input.nextLine();
+        
+        System.out.println();
+        if(playerName.toLowerCase() == "iron man") {
+            System.out.println("Now that's the kind of name a narrator wants to hear!");
+            System.out.println("Oh wait, isn't that name basically copyrighted? And you don't seem to be the REAL Iron Man...");
+            System.out.println("I'm just going to call you, Fraud! Oh, isn't that such a cute name? And it perfectly fits you!");
+            System.out.println("[Your name has been changed to Fraud]");
+            playerName = "Fraud";
+        }
+        else if(playerName.toLowerCase() == "the destroyer of worlds") {
+            System.out.println("Wow, that's a really cool name.");
+            System.out.println("I guess since you're playing this game, you must have no worlds to destroy left.");
+            playerName = "Destroyer of Worlds";
+        }
+        else {
+            System.out.println("Er... really? That's your name? Why not something cool, like Iron Man or the Destroyer of Worlds?");
+            System.out.println("I mean-- What a WONDERFUL name! A perfect fit for a darring adventurer such as yourself!");
+        }
+        System.out.println(); 
+        
+        setGenreAdventure(playerName);
+        
+    }
+    
+    public static void setGenreAdventure(String playerName) {
+        Scanner input = new Scanner(System.in);
+        
+        for(int i = 0; i < 1; i++) {
+            System.out.println("Now tell me " + playerName + ", what genre would you like your tale to be?");
+            System.out.println("[Romance]   [Comedy]    [Science Fiction]   [Action]    [Mystery]   [Drama]");
+            String playerGenre = input.nextLine();
+            System.out.println();
+            switch (playerGenre.toLowerCase()) {
+                case "romance":
+                    System.out.println("Really? Romance? I mean, if you said rom com, I just might have made some adjustments.");
+                    System.out.println("I understand that this tale is supposed to be about YOU, but let me make this decision and say you'd be much better off with a more adventurous tale.");
+                    System.out.println("[You have changed the genre to ADVENTURE]");
+                    break;
+                case "comedy":
+                    System.out.println("Asking for a comedy genre is comedy in it's self.");
+                    System.out.println("If you really want a comedically good browser bassed, zero-player game, try Godville.");
+                    System.out.println("Unfortunately, since you cant't seem to make the best decisions right now (including your name), I'll make the decision for you.");
+                    System.out.println("[You have changed the genre to ADVENTURE]");
+                    break;
+                case "science fiction":
+                    System.out.println("Ah, science fiction.");
+                    System.out.println("No.");
+                    System.out.println("I love sci-fi movies but to tell you the truth, I couldn't make you a good enough plot in that category to save your life.");
+                    System.out.println("Instead, lets go with my forte.");
+                    System.out.println("[You have changed the genre to ADVENTURE]");
+                    break;
+                case "action":
+                    System.out.println("Wow, my parents love action movies. Actually, all my family does.");
+                    System.out.println("I think everyone universally loves a kick-butt character.");
+                    System.out.println("Too bad you're not going to be one.");
+                    System.out.println("[You have changed the genre to ADVENTURE]");
+                    break;
+                case "mystery":
+                    break;
+                case "drama":
+                    break;
+                default:
+                    System.out.println("Oh? Were my instructions unlear? Choose one of the genres I have listed above and type it below. And ONLY one of those genres.");
+                    System.out.println("I don't watch alot of movies so I don't know alot of genres by heart, okay?");
+                    i--;
+                    break;
+            }
+        }
+    }
+    
+    public static void hackTitle() {
+        System.out.println("███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████");
+        System.out.println("███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████");
+        System.out.println("████                    ███        ████████        ███                ██████  █████  ████   ████     ████     ██████   ████      ███     ███     ███ ███    ███████████");
+        System.out.println("████                    ███        ████████        ███                ██████    ███  ███  █  ███  ██  ███  ██  ████  █  █████  ████  ███  ██  ██  █████  ██████████████");
+        System.out.println("████                    ███        ████████        ███                ██████  █  ██  ██  ███  ██     ████     ████  ███  ████  ████  ███  ██     ██████     ███████████");
+        System.out.println("██████████        █████████        ████████        ███        ██████████████  ██  █  ██       ██  ██  ███  ██  ███       ████  ████  ███  ██  ██  ████████  ███████████");
+        System.out.println("██████████        █████████                        ███        ██████████████  ███    ██  ███  ██  ███  ██  ███  ██  ███  ████  █████     ███  ███  ████    ████████████");
+        System.out.println("██████████        █████████                        ███                █████████████████████████████████████████████████████████████████████████████████████████████████");
+        System.out.println("██████████        █████████                        ███                █████████████████████████████████████████████████████████████████████████████████████████████████");
+        System.out.println("██████████        █████████                        ███                █████████████████████████████████████████████████████████████████████████████████████████████████");
+        System.out.println("██████████        █████████        ████████        ███        ██████████████      ████   ████  █████      █████████████████████████████████████████████████████████████");
+        System.out.println("██████████        █████████        ████████        ███        ████████████████  █████  █  ███  █████  █████████████████████████████████████████████████████████████████");
+        System.out.println("██████████        █████████        ████████        ███                ████████  ████  ███  ██  █████      █████████████████████████████████████████████████████████████");
+        System.out.println("██████████        █████████        ████████        ███                ████████  ████       ██  █████  █████████████████████████████████████████████████████████████████");
+        System.out.println("██████████        █████████        ████████        ███                ████████  ████  ███  ██     ██      █████████████████████████████████████████████████████████████");
+        System.out.println("███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████");
+        System.out.println("███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████");
+        
+    }
+}
